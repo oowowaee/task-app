@@ -1,0 +1,5 @@
+<div class="row task-lists">
+  <div class="col-sm-12 col-md-4" *ngFor="let taskState of taskStates">
+    <task-list [tasks]="tasks | filterByState: taskState.id" [taskState]="taskState"></task-list>
+  </div>
+</div>

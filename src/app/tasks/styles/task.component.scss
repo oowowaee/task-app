@@ -1,0 +1,36 @@
+.bg-purple {
+  background-color: #c194c1;
+}
+
+.bg-blue {
+  background-color: lighten(blue, 40%);
+}
+
+.bg-green {
+  background-color: rgba(88, 173, 88, 0.58);
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-lightblue {
+  background-color: lightblue;
+}
+
+.bg-lightcoral {
+  background-color: lightcoral;
+}
+
+.bg-lightgrey {
+  background-color: lightgrey;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+}
+
+.badge input {
+  width: 20px;
+}

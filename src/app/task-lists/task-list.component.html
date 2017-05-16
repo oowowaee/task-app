@@ -1,0 +1,11 @@
+<div class="task-list">
+  <h4 class="task-state">
+    {{taskState.text | capitalize}}
+    <span class="float-right badge badge-default">{{totalTime()}}</span>
+  </h4>
+  <ul class="list-unstyled">
+    <li *ngFor="let task of tasks">
+      <task-info [task]="task"></task-info>
+    </li>
+  </ul>
+</div>
