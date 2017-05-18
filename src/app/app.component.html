@@ -1,4 +1,9 @@
-Nav: <a [routerLink]="['/tasks']">Tasks</a> : <a [routerLink]="['/task/new']">Add Task</a>
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" [routerLink]="['/tasks']" routerLinkActive="active">Tasks</a>
+    <a class="nav-item nav-link" [routerLink]="['/task/new']" routerLinkActive="active">Add Task</a>
+  </div>
+</nav>
 
 <div class="container">
   <router-outlet></router-outlet>

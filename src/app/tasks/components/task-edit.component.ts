@@ -14,6 +14,7 @@ import { Task } from '../task';
 
 export class TaskEditComponent extends TaskBase implements OnInit {
   task: Task;
+  isNew = false;
 
   constructor(
     private taskService: TaskService,
