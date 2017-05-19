@@ -14,6 +14,6 @@ export class TaskListComponent {
   @Input() taskState: TaskState;
 
   totalTime(): Number {
-    return _.sum(_.map(this.tasks, (task) => { return +task.estimate }));
+    return _.sum(_.map(this.tasks, (task) => { return +task.estimate || 0 }));
   }
 }

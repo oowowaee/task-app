@@ -34,3 +34,19 @@ select {
 .dropdown-toggle {
   float: right;
 }
+
+.nav-item {
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 25px;
+}
+
+input.ng-invalid.ng-touched {
+  background-color: $error-input-color;
+}
+
+.error {
+  color: $error-text-color;
+}

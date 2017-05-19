@@ -1,9 +1,9 @@
 <div class="task">
   <a [routerLink]="['/task', task.id]">
     <div class="card-block">
-      <h5 class="card-title bg-{{bgColor}}" >
+      <h6 class="card-title bg-{{bgColor}}" >
         {{task.name | capitalize}}<span class="float-right badge badge-default">{{task.estimate}}</span>
-      </h5>
+      </h6>
       <p class="card-text">
         {{task.description}}
       </p>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { CustomFormsModule } from 'ng2-validation';
 
 import { AppComponent } from './app.component';
 import { TaskDisplayComponent } from './task-display/task-display.component';
@@ -31,9 +31,8 @@ import { AppRoutingModule }   from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     AppRoutingModule,
-    //NgbModule.forRoot()
+    CustomFormsModule
   ],
   providers: [ TaskService ],
   bootstrap: [ AppComponent ]

@@ -1,19 +1,23 @@
 <div class="row justify-content-center">
   <div class="task new-task col-sm-8 col-lg-6">
-    <div class="card-block" *ngIf="task">
-      <h5 class="card-title bg-{{bgColor}}">
-        <input [(ngModel)]="task.name" placeholder="Name" />
-        <span class="float-right badge badge-default">
-          <input [(ngModel)]="task.estimate" placeholder="Estimate" />
-        </span>
-      </h5>
-      <select class="custom-select" [(ngModel)]="task.state">
-        <option *ngFor="let state of taskStates" [value]="state.id">{{state.text | capitalize}}</option>
-      </select>
-      <p class="card-text">
-        <textarea [(ngModel)]="task.description" placeholder="Task Description"></textarea>
-      </p>
-    </div>
+    <form #taskForm="ngForm" *ngIf="task">
+      <p class="error" *ngIf="estimate.errors?.number">Estimate must be a number</p>
+
+      <div class="card-block">
+        <h6 class="card-title bg-{{bgColor}}">
+          <input [(ngModel)]="task.name" name="name" placeholder="Name" />
+          <span class="float-right badge badge-default">
+            <input [(ngModel)]="task.estimate" name="estimate" #estimate="ngModel" placeholder="Estimate" number />
+          </span>
+        </h6>
+        <select class="custom-select" name="state" [(ngModel)]="task.state">
+          <option *ngFor="let state of taskStates" [value]="state.id">{{state.text | capitalize}}</option>
+        </select>
+        <p class="card-text">
+          <textarea [(ngModel)]="task.description" name="description" placeholder="Task Description"></textarea>
+        </p>
+      </div>
+    </form>
 
     <div *ngIf="task && task.id" (click)="deleteTask()" class="btn btn-danger float-right">Delete</div>
     <div *ngIf="isNew" (click)="addTask()" class="btn btn-secondary float-right">Submit</div>

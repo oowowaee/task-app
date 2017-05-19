@@ -10,7 +10,8 @@ import { Task } from '../task';
 @Component({
   selector: 'task-new',
   templateUrl: '../views/task-edit.component.html',
-  styleUrls: ['../styles/task.component.scss'],
+  styleUrls: ['../styles/task.component.scss',
+              '../styles/task-edit.component.scss'],
 })
 
 export class TaskNewComponent extends TaskBase {
